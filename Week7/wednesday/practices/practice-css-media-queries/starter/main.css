@@ -85,13 +85,59 @@ header {
 /* ----- Phase 1 - Moderate Screen ----- */
 
 /* Your code here */
+@media screen and (min-width: 820px) and (max-width: 1219px) {
+    .page {
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: row;
+    }
+    .sidebar {
+        flex-direction: column;
+    }
+}
 
 /* ----- Phase 1 - Wide Screen ----- */
 
 /* Your code here */
-
+@media screen and (min-width: 1220px) {
+    .page {
+        flex-direction: row;
+    }
+    .content {
+        flex-direction: row;
+    }
+    .sidebar {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
 /* ===== PRINTING ===== */
 
 /* Phase 2 */
+@media print {
+    header, .sidebar, .image-box {
+        display: none;
+        visibility: hidden;
+    }
 
+    .story-box {
+        background-color: white;
+        padding: 0;
+        filter: none;
+    }
+
+    .page, .content {
+        padding: 0;
+    }
+
+    /* Bonus Phase - and remove .image-box from first line under @media print */
+    .image-box {
+        width: 85px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        float: right;
+    }
+}
 /* Your code here */
